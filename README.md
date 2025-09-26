@@ -1,3 +1,3 @@
-d folder has inheritance, enum, some basic pictures structure, private instance 
-sample folder has
-async folder has two counter app and async streams files
+- d folder has inheritance, enum, some basic pictures structure, private instance 
+- sample folder has
+- async folder has two counter app and async streams files
