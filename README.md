@@ -1,3 +1,4 @@
 - d folder has inheritance, enum, some basic pictures structure, private instance 
 - sample folder has list tile of fruits 
 - async folder has two counter app and async streams files
+- program is assignment 1 part with calculator dart etc
