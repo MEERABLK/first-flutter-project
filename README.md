@@ -3,3 +3,4 @@
 - async folder has two counter app and async streams files
 - program is assignment 1 part with calculator dart etc
 - theoryclass2 has movies tile format file
+- sqlitedemo has db, queries, and navigations
