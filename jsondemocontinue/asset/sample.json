@@ -1,0 +1,19 @@
+{
+  "items": [
+    {
+      "id": "laptop",
+      "name": "Windows",
+      "description": "Ease of Interface"
+    },
+    {
+      "id": "PC",
+      "name": "MAC",
+      "description": "Powerful Machine"
+    },
+    {
+      "id": "Game",
+      "name": "Play Station",
+      "description": "Experience Nvidia Engine"
+    }
+  ]
+}
