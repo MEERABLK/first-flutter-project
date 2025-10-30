@@ -4,3 +4,4 @@
 - program is assignment 1 part with calculator dart etc
 - theoryclass2 has movies tile format file
 - sqlitedemo has db, queries, and navigations
+- jsondemocontinue contains navigations and fetching json file
