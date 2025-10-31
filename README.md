@@ -6,3 +6,4 @@
 - sqlitedemo has db, queries, and navigations
 - jsondemocontinue contains navigations and fetching json file
 - apicode contains fetching http restful api from json website and yaml edited with http: any 
+- dropdownproject has dices app
