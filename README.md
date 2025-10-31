@@ -2,7 +2,7 @@
 - sample folder has list tile of fruits 
 - async folder has two counter app and async streams files
 - program is assignment 1 part with calculator dart etc
-- theoryclass2 has movies tile format file
+- theoryclass2 has movies tile format file and build image column/row view(8 pics roblox meme)
 - sqlitedemo has db, queries, and navigations
 - jsondemocontinue contains navigations and fetching json file
 - apicode contains fetching http restful api from json website and yaml edited with http: any 
