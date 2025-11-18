@@ -7,3 +7,5 @@
 - jsondemocontinue contains navigations and fetching json file
 - apicode contains fetching http restful api from json website and yaml edited with http: any 
 - diceapp has dices app, drowpdown, volume
+- secondfirebase contains all firebase works
+- sampledemo contains datepicker, image capture, and apps launcher like phone call
