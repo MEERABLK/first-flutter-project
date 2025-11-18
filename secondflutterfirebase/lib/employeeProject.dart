@@ -14,29 +14,29 @@ void main() async {
     ),
   );
 
-  runApp(MyApp());
+  runApp(MyApp2());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MyApp2 extends StatelessWidget {
+  const MyApp2({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MyFS(),
+      home: MyFS2(),
     );
   }
 }
 
-class MyFS extends StatefulWidget {
-  const MyFS({super.key});
+class MyFS2 extends StatefulWidget {
+  const MyFS2({super.key});
 
   @override
-  State<MyFS> createState() => _MyFSState();
+  State<MyFS2> createState() => _MyFSState();
 }
 
-class _MyFSState extends State<MyFS> {
+class _MyFSState extends State<MyFS2> {
   final CollectionReference users =
   FirebaseFirestore.instance.collection('Users');
 
