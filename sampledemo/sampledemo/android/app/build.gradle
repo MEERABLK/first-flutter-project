@@ -22,7 +22,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.sampledemo"
-        minSdk flutter.minSdkVersion
+        minSdkVersion 23
         targetSdk flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
