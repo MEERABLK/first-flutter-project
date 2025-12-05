@@ -5,7 +5,10 @@ import 'package:flutter/services.dart';
 void main() {
   runApp(const MyApp());
 }
-//TODO:convert kelvin to celsius with 273.15
+
+// Convert Kelvin to Celsius helper
+String kelvinToCelsius(double kelvin) => (kelvin - 273.15).toStringAsFixed(1);
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -45,7 +48,7 @@ class _LocalJsonState extends State<LocalJson> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.lightBlueAccent, // iPhone weather app blue
+      backgroundColor: Colors.lightBlueAccent,
       body: weatherData == null
           ? const Center(child: CircularProgressIndicator(color: Colors.white))
           : SafeArea(
@@ -63,9 +66,7 @@ class _LocalJsonState extends State<LocalJson> {
             ),
             const SizedBox(height: 10),
             Text(
-              // '${(weatherData!['main']['temp']-273.15).toStringAsFixed(0)}'.toString(),
-
-            '${weatherData!['main']['temp']}',
+              kelvinToCelsius(weatherData!['main']['temp']) + '°C',
               style: const TextStyle(
                 fontSize: 90,
                 color: Colors.white,
@@ -82,7 +83,8 @@ class _LocalJsonState extends State<LocalJson> {
             ),
             const SizedBox(height: 10),
             Text(
-              'H:${weatherData!['main']['temp_max']}   L:${weatherData!['main']['temp_min']}',
+              'H: ${kelvinToCelsius(weatherData!['main']['temp_max'])}°C   '
+                  'L: ${kelvinToCelsius(weatherData!['main']['temp_min'])}°C',
               style: const TextStyle(color: Colors.white70, fontSize: 16),
             ),
             const SizedBox(height: 25),
@@ -105,30 +107,28 @@ class _LocalJsonState extends State<LocalJson> {
                   SizedBox(
                     height: 100,
                     child: ListView(
-                      // to scroll through weathers
                       scrollDirection: Axis.horizontal,
-                      children: [
-                        for (var i = 0; i < 6; i++)
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 12),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  '${9 + i} AM',
-                                  style: const TextStyle(color: Colors.white70),
-                                ),
-                                const SizedBox(height: 8),
-                                const Icon(Icons.wb_sunny, color: Colors.yellowAccent),
-                                const SizedBox(height: 8),
-                                Text(
-                                  '${weatherData!['main']['temp'] + i}°',
-                                  style: const TextStyle(color: Colors.white),
-                                ),
-                              ],
-                            ),
-                          )
-                      ],
+                      children: List.generate(6, (i) {
+                        return Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 12),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                '${9 + i} AM',
+                                style: const TextStyle(color: Colors.white70),
+                              ),
+                              const SizedBox(height: 8),
+                              const Icon(Icons.wb_sunny, color: Colors.yellowAccent),
+                              const SizedBox(height: 8),
+                              Text(
+                                kelvinToCelsius(weatherData!['main']['temp']) + '°C',
+                                style: const TextStyle(color: Colors.white),
+                              ),
+                            ],
+                          ),
+                        );
+                      }),
                     ),
                   ),
                 ],
@@ -136,7 +136,7 @@ class _LocalJsonState extends State<LocalJson> {
             ),
             const SizedBox(height: 30),
 
-            // 10 Day Forecast
+            // 10-Day Forecast
             Expanded(
               child: Container(
                 width: double.infinity,
@@ -168,7 +168,8 @@ class _LocalJsonState extends State<LocalJson> {
                                 const Icon(Icons.wb_sunny, color: Colors.yellowAccent),
                                 SizedBox(width: 120),
                                 Text(
-                                  '${weatherData!['main']['temp_min'] + index}° / ${weatherData!['main']['temp_max'] + index}°',
+                                  '${kelvinToCelsius(weatherData!['main']['temp_min'])}°C / '
+                                      '${kelvinToCelsius(weatherData!['main']['temp_max'])}°C',
                                   style: const TextStyle(color: Colors.white),
                                 ),
                               ],
