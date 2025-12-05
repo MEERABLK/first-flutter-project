@@ -9,3 +9,14 @@
 - diceapp has dices app, drowpdown, volume
 - secondfirebase contains all firebase works
 - sampledemo contains datepicker, image capture, and apps launcher like phone call
+
+  ### Issues Fix
+  ```gradle
+  - if version compile options try :
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = "17"
+    } 
